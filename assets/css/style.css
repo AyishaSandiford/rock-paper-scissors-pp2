@@ -1,23 +1,5 @@
 #gamebox {
     padding: 20px;
     border: solid 1px red;
-    height: 1000px;
-    width: 500px;
-    margin: 20px auto;
-    position: relative;
 }
 
-#gamebox > section {
-    position: absolute;
-    top: 0;
-    margin: 0 auto;
-    width: 400px;
-    display:none;
-}
-
-#roundResults {
-    margin-top: 20px;
-    padding: 10px;
-    background: #EEE;
-    display: none;
-}
