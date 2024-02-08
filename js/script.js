@@ -56,6 +56,19 @@ function play(youChoice) {
 
     youScoreLabel.innerHTML = game.you.score;
     cpuScoreLabel.innerHTML = game.cpu.score;
+
+    // Check to see if the cpu is = to 5 or if the user is = to 5
+    if (game.cpu.score === 5 || game.you.score === 5) {
+        // find out who reach 5
+        // If cpu SCORE === 5 console.log 'CPU'
+        if (game.cpu.score === 5) {
+            console.log('CPU');
+        }
+        // If you SCORE === 5 console.log 'YOU'
+        if (game.you.score === 5) {
+            console.log('YOU');
+        }
+    }
 }
 
 function rockChosen() {
