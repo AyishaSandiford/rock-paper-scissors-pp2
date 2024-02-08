@@ -8,6 +8,8 @@ const homeBtn = document.getElementById('homeBtn');
 const rock = document.getElementById('rock')
 const paper = document.getElementById('paper');
 const scissors = document.getElementById('scissors');
+const youChoiceLabel = document.getElementById('youChoiceLabel')
+const cpuChoiceLabel = document.getElementById('cpuChoiceLabel')
 
 
 howToPlayBtn.addEventListener('click', navPageHow);
@@ -40,7 +42,9 @@ const options = [
 function play(youChoice) {
     game.you.choice = youChoice;
     assignCpuChoice();
-    console.log(youChoice);
+
+    youChoiceLabel.innerHTML = options[game.you.choice];
+    cpuChoiceLabel.innerHTML = options[game.cpu.choice];
 }
 
 function rockChosen() {
@@ -58,6 +62,26 @@ function scissorsChosen() {
 // Generates a random play for the computer
 function assignCpuChoice() {
     game.cpu.choice = Math.floor(Math.random() * 3)
+}
+
+function judge() {
+
+    if (game.you.choice === game.cpu.choice) {
+        return false;
+    }
+
+    if (game.you.choice === 0 && game.cpu.choice === 2) {
+        return 'you';
+    }
+
+    if (game.you.choice === 1 && game.cpu.choice === 0) {
+        return 'you';
+    }
+
+    if (game.you.choice === 2 && game.cpu.choice === 1 ) {
+        return 'you';
+    }
+    return 'cpu';
 }
 
 
