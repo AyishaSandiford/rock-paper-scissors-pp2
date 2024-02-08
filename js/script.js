@@ -19,6 +19,7 @@ const currentRound = document.getElementById('currentRound');
 const currentRoundLabel = document.getElementById('currentRoundLabel');
 const nextRoundLabel = document.getElementById('nextRoundLabel');
 const nextRound = document.getElementById('nextRound');
+const playAgainBtn = document.getElementById('playAgainBtn');
 const resetBtn = document.getElementById('resetBtn');
 
 
@@ -36,7 +37,7 @@ backBtn.addEventListener('click', navPageHome );
 startBtn.addEventListener('click',navPagePlay);
 homeBtn.addEventListener('click', navPageHome);
 resetBtn.addEventListener('click', resetGame);
-
+playAgainBtn.addEventListener('click', playAgain)
 
 
 rockBtn.addEventListener('click', rockChosen);
@@ -96,6 +97,7 @@ function play(youChoice) {
         nextRoundLabel.style.display = 'none';
         currentRoundLabel.style.display = 'none';
         disablePlayButtons();
+        playAgainBtn.style.display = 'block';
         resetBtn.style.display = 'none';
         return;
     }
@@ -173,7 +175,7 @@ function assignCpuChoice() {
 
 function navPageHome() {
     showIntro();
-
+    playAgain();
 }
 
 function navPageHow() {
@@ -207,7 +209,12 @@ function disablePlayButtons() {
     }
 }
 
-
+function enablePlayButtons() {
+    const playButtons = document.getElementsByClassName('playBtn')
+    for (const playButton of playButtons) {
+        playButton.disabled = false;
+    }
+}
 
 function resetGame() {
     // update the innerHTML for you choice to waiting
@@ -234,6 +241,20 @@ function resetGame() {
     game.round = 1
 
     // Refreshes the text on the page to reflect these values
+}
+
+function playAgain() {
+    hide(winnerLabel);
+    resetGame();
+    currentRoundLabel.style.display = 'block';
+    enablePlayButtons();
+    playAgainBtn.style.display = 'none';
+    resetBtn.style.display = 'block';
+
+}
+
+function hide(element) {
+    element.style.display = 'none';
 }
 
 showIntro();
