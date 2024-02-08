@@ -4,12 +4,13 @@ const homeSec = document.getElementById('intro');
 const howToPlayBtn = document.getElementById('howToPlayBtn');
 const playSec = document.getElementById('play')
 const startBtn = document.getElementById('startBtn');
-
+const homeBtn = document.getElementById('homeBtn');
 
 
 howToPlayBtn.addEventListener('click', navPageHow);
 backBtn.addEventListener('click', navPageHome);
 startBtn.addEventListener('click', navPagePlay);
+homeBtn.addEventListener('click', navPageHome);
 
 
 
