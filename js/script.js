@@ -12,6 +12,8 @@ const youChoiceLabel = document.getElementById('youChoiceLabel')
 const cpuChoiceLabel = document.getElementById('cpuChoiceLabel')
 const youScoreLabel = document.getElementById('youScoreLabel');
 const cpuScoreLabel = document.getElementById('cpuScoreLabel');
+const winner = document.getElementById('winner')
+const winnerLabel = document.getElementById('winnerLabel')
 
 
 howToPlayBtn.addEventListener('click', navPageHow);
@@ -22,6 +24,10 @@ rock.addEventListener('click', rockChosen);
 paper.addEventListener('click', paperChosen);
 scissors.addEventListener('click', scissorsChosen);
 
+
+const ROCK = 0;
+const PAPER = 1;
+const SCISSORS = 2;
 
 let game = {
     round: 1,
@@ -60,15 +66,16 @@ function play(youChoice) {
     // Check to see if the cpu is = to 5 or if the user is = to 5
     if (game.cpu.score === 5 || game.you.score === 5) {
         // find out who reach 5
-        // If cpu SCORE === 5 console.log 'CPU'
+        // If cpu SCORE === 5 update innerHTML to say 'CPU'
         if (game.cpu.score === 5) {
-            console.log('CPU');
+            winner.innerHTML = 'CPU';
         }
-        // If you SCORE === 5 console.log 'YOU'
+        // If you SCORE === 5 update innerHTML to say 'YOU'
         if (game.you.score === 5) {
-            console.log('YOU');
+            winner.innerHTML = 'YOU'
         }
     }
+
 }
 
 function rockChosen() {
@@ -94,15 +101,15 @@ function judge() {
         return false;
     }
 
-    if (game.you.choice === 0 && game.cpu.choice === 2) {
+    if (game.you.choice === ROCK && game.cpu.choice === SCISSORS) {
         return 'you';
     }
 
-    if (game.you.choice === 1 && game.cpu.choice === 0) {
+    if (game.you.choice === PAPER && game.cpu.choice === ROCK) {
         return 'you';
     }
 
-    if (game.you.choice === 2 && game.cpu.choice === 1 ) {
+    if (game.you.choice === SCISSORS && game.cpu.choice === PAPER ) {
         return 'you';
     }
     return 'cpu';
