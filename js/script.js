@@ -5,6 +5,9 @@ const howToPlayBtn = document.getElementById('howToPlayBtn');
 const playSec = document.getElementById('play')
 const startBtn = document.getElementById('startBtn');
 const homeBtn = document.getElementById('homeBtn');
+const rock = document.getElementById('rock')
+const paper = document.getElementById('paper');
+const scissors = document.getElementById('scissors');
 
 
 howToPlayBtn.addEventListener('click', navPageHow);
@@ -12,6 +15,24 @@ backBtn.addEventListener('click', navPageHome);
 startBtn.addEventListener('click', navPagePlay);
 homeBtn.addEventListener('click', navPageHome);
 
+
+let game = {
+    round: 1,
+    you: {
+        choice: null,
+        score: 0,
+    },
+    cpu: {
+        choice: null,
+        score: 0,
+    }
+}
+
+const options = [
+    'rock',
+    'paper',
+    'scissors',
+]
 
 
 
