@@ -2,8 +2,9 @@ const backBtn = document.getElementById('backBtn');
 const howToPlaySec = document.getElementById('howToPlaySec');
 const homeSec = document.getElementById('intro');
 const howToPlayBtn = document.getElementById('howToPlayBtn');
-playSec = document.getElementById('play')
+const playSec = document.getElementById('play')
 const startBtn = document.getElementById('startBtn');
+
 
 
 howToPlayBtn.addEventListener('click', navPageHow);
