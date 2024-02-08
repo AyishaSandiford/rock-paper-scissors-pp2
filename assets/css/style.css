@@ -1,5 +1,15 @@
 #gamebox {
-    padding: 20px;
     border: solid 1px red;
+    height: 1000px;
+    width: 500px;
+    margin: 20px auto;
+    position: relative;
 }
 
+#gamebox > section {
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    width: 460px;
+    display: none;
+}
