@@ -14,6 +14,9 @@ howToPlayBtn.addEventListener('click', navPageHow);
 backBtn.addEventListener('click', navPageHome);
 startBtn.addEventListener('click', navPagePlay);
 homeBtn.addEventListener('click', navPageHome);
+rock.addEventListener('click', rockChosen);
+paper.addEventListener('click', paperChosen);
+scissors.addEventListener('click', scissorsChosen);
 
 
 let game = {
@@ -34,6 +37,23 @@ const options = [
     'scissors',
 ]
 
+function play(youChoice) {
+    game.you.choice = youChoice;
+    assignCpuChoice();
+}
+
+
+function rockChosen() {
+    play(0);
+}
+
+function paperChosen() {
+    play(1);
+}
+
+function scissorsChosen() {
+    play(2);
+}
 
 // Generates a random play for the computer
 function assignCpuChoice() {
