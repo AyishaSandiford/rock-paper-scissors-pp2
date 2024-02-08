@@ -40,8 +40,8 @@ const options = [
 function play(youChoice) {
     game.you.choice = youChoice;
     assignCpuChoice();
+    console.log(youChoice);
 }
-
 
 function rockChosen() {
     play(0);
