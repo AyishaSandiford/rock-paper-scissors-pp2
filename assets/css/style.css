@@ -13,3 +13,35 @@
     width: 460px;
     display: none;
 }
+
+#roundResults {
+    margin-top: 20px;
+    padding: 10px;
+    background: #EEE;
+    display: none;
+}
+
+#roundDisplay {
+    margin: 50px;
+    position: relative;
+    width: 300px;
+    height: 200px;
+    border: 2px solid green;
+}
+#scoreSec {
+    margin-bottom: 20px;
+}
+
+#nextRoundLabel {
+    display: none;
+}
+
+#winnerLabel {
+    display: none;
+}
+
+#playAgainBtn {
+    display: none;
+}
+
+
