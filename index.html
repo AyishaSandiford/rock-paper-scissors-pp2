@@ -60,12 +60,12 @@
         <h2>Rock Paper Scissors</h2>
         <h3> Time To Play </h3>
         <div>
-            <button id ="rock" > Rock </button>
-            <button id ="paper" > Paper </button>
-            <button id ="scissors" > Scissors </button>
+            <button  class= "playBtn" id ="rock" > Rock </button>
+            <button class= "playBtn" id ="paper" > Paper </button>
+            <button class= "playBtn" id ="scissors" > Scissors </button>
         </div>
-        <div>
-            <p> YOU Chose: <span id="youChoiceLabel">waiting</span> </p>
+        <div id="roundDisplay">
+            <p> YOU Chose: <span id="youChoiceLabel">waiting</span></p>
             <p> CPU Chose: <span id="cpuChoiceLabel">waiting</span></p>
             <p id="currentRoundLabel"> Round <span id="currentRound">1</span>: <span id="roundResultLabel"> Pending </span></p>
             <p id="nextRoundLabel"> Make a selection for ROUND : <span id="nextRound"></span></p>
@@ -80,6 +80,7 @@
         <div>
             <button id="resetBtn"> Reset </button>
             <button id="homeBtn"> Home </button>
+            <button id="playAgainBtn"> Play Again </button>
         </div>
     </section>
 </div>
