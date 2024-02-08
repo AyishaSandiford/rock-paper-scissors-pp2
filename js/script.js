@@ -10,6 +10,8 @@ const paper = document.getElementById('paper');
 const scissors = document.getElementById('scissors');
 const youChoiceLabel = document.getElementById('youChoiceLabel')
 const cpuChoiceLabel = document.getElementById('cpuChoiceLabel')
+const youScoreLabel = document.getElementById('youScoreLabel');
+const cpuScoreLabel = document.getElementById('cpuScoreLabel');
 
 
 howToPlayBtn.addEventListener('click', navPageHow);
@@ -45,6 +47,15 @@ function play(youChoice) {
 
     youChoiceLabel.innerHTML = options[game.you.choice];
     cpuChoiceLabel.innerHTML = options[game.cpu.choice];
+
+    /* Judge returns 'you' if you won,
+    'cpu' if the computer won
+    and false if it's a tie */
+    const result = judge();
+    assignPoints(result);
+
+    youScoreLabel.innerHTML = game.you.score;
+    cpuScoreLabel.innerHTML = game.cpu.score;
 }
 
 function rockChosen() {
@@ -82,6 +93,20 @@ function judge() {
         return 'you';
     }
     return 'cpu';
+}
+
+function assignPoints(result) {
+    if (result === false) {
+        return;
+    }
+
+    if (result === 'you') {
+        game.you.score = game.you.score + 1
+    }
+
+    if (result === 'cpu') {
+        game.cpu.score = game.cpu.score + 1
+    }
 }
 
 
