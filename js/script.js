@@ -1,8 +1,15 @@
+const backBtn = document.getElementById('backBtn');
 const howToPlaySec = document.getElementById('howToPlaySec');
 const homeSec = document.getElementById('intro');
 const howToPlayBtn = document.getElementById('howToPlayBtn');
 
 howToPlayBtn.addEventListener('click', navPageHow);
+backBtn.addEventListener('click', navPageHome);
+
+
+function navPageHome() {
+    showIntro();
+}
 
 // Hide All Screens
 function hideAllScreens() {
