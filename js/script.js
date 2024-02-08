@@ -35,6 +35,11 @@ const options = [
 ]
 
 
+// Generates a random play for the computer
+function assignCpuChoice() {
+    game.cpu.choice = Math.floor(Math.random() * 3)
+}
+
 
 // Hide All Screens
 function hideAllScreens() {
