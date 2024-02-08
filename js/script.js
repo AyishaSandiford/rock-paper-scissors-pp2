@@ -13,7 +13,12 @@ const cpuChoiceLabel = document.getElementById('cpuChoiceLabel')
 const youScoreLabel = document.getElementById('youScoreLabel');
 const cpuScoreLabel = document.getElementById('cpuScoreLabel');
 const winner = document.getElementById('winner')
-const winnerLabel = document.getElementById('winnerLabel')
+const winnerLabel = document.getElementById('winnerLabel');
+const roundResultLabel = document.getElementById('roundResultLabel');
+const currentRound = document.getElementById('currentRound');
+const currentRoundLabel = document.getElementById('currentRoundLabel');
+const nextRoundLabel = document.getElementById('nextRoundLabel');
+const nextRound = document.getElementById('nextRound');
 
 
 howToPlayBtn.addEventListener('click', navPageHow);
@@ -75,6 +80,26 @@ function play(youChoice) {
             winner.innerHTML = 'YOU'
         }
     }
+
+    // Display the name of the winner of each round
+    if (result === 'cpu') {
+        roundResultLabel.innerHTML = 'CPU Won';
+    }
+
+    if (result === 'you') {
+        roundResultLabel.innerHTML = 'You Won';
+    }
+
+    if (result === false) {
+        roundResultLabel.innerHTML = "It's a tie";
+    }
+
+    currentRound.innerHTML = game.round;
+    game.round = game.round + 1;
+
+    nextRound.innerHTML = game.round;
+    nextRoundLabel.style.display = 'block';
+
 
 }
 
