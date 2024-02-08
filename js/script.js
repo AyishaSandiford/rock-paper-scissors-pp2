@@ -19,16 +19,29 @@ const currentRound = document.getElementById('currentRound');
 const currentRoundLabel = document.getElementById('currentRoundLabel');
 const nextRoundLabel = document.getElementById('nextRoundLabel');
 const nextRound = document.getElementById('nextRound');
+const resetBtn = document.getElementById('resetBtn');
 
 
-howToPlayBtn.addEventListener('click', navPageHow);
-backBtn.addEventListener('click', navPageHome);
-startBtn.addEventListener('click', navPagePlay);
+
+const rockBtn = document.getElementById('rock')
+const paperBtn = document.getElementById('paper')
+const scissorsBtn = document.getElementById('scissors');
+
+
+
+
+
+howToPlayBtn.addEventListener('click', navPageHow );
+backBtn.addEventListener('click', navPageHome );
+startBtn.addEventListener('click',navPagePlay);
 homeBtn.addEventListener('click', navPageHome);
-rock.addEventListener('click', rockChosen);
-paper.addEventListener('click', paperChosen);
-scissors.addEventListener('click', scissorsChosen);
+resetBtn.addEventListener('click', resetGame);
 
+
+
+rockBtn.addEventListener('click', rockChosen);
+paperBtn.addEventListener('click', paperChosen);
+scissorsBtn.addEventListener('click', scissorsChosen);
 
 const ROCK = 0;
 const PAPER = 1;
@@ -72,13 +85,19 @@ function play(youChoice) {
     if (game.cpu.score === 5 || game.you.score === 5) {
         // find out who reach 5
         // If cpu SCORE === 5 update innerHTML to say 'CPU'
-        if (game.cpu.score === 5) {
+        if(game.cpu.score === 5) {
             winner.innerHTML = 'CPU';
         }
         // If you SCORE === 5 update innerHTML to say 'YOU'
-        if (game.you.score === 5) {
+        if(game.you.score === 5) {
             winner.innerHTML = 'YOU'
         }
+        winnerLabel.style.display = 'block';
+        nextRoundLabel.style.display = 'none';
+        currentRoundLabel.style.display = 'none';
+        disablePlayButtons();
+        resetBtn.style.display = 'none';
+        return;
     }
 
     // Display the name of the winner of each round
@@ -99,25 +118,20 @@ function play(youChoice) {
 
     nextRound.innerHTML = game.round;
     nextRoundLabel.style.display = 'block';
-
-
 }
 
-function rockChosen() {
-    play(0);
-}
+function assignPoints(result) {
+    if (result === false) {
+        return;
+    }
 
-function paperChosen() {
-    play(1);
-}
+    if (result === 'you') {
+        game.you.score = game.you.score + 1
+    }
 
-function scissorsChosen() {
-    play(2);
-}
-
-// Generates a random play for the computer
-function assignCpuChoice() {
-    game.cpu.choice = Math.floor(Math.random() * 3)
+    if (result === 'cpu') {
+        game.cpu.score = game.cpu.score + 1
+    }
 }
 
 function judge() {
@@ -140,22 +154,45 @@ function judge() {
     return 'cpu';
 }
 
-function assignPoints(result) {
-    if (result === false) {
-        return;
-    }
+function rockChosen() {
+    play(ROCK);
+}
 
-    if (result === 'you') {
-        game.you.score = game.you.score + 1
-    }
+function paperChosen() {
+    play(PAPER);
+}
 
-    if (result === 'cpu') {
-        game.cpu.score = game.cpu.score + 1
-    }
+function scissorsChosen() {
+    play(SCISSORS);
 }
 
 
-// Hide All Screens
+function assignCpuChoice() {
+    game.cpu.choice = Math.floor(Math.random() * 3)
+}
+
+function navPageHome() {
+    showIntro();
+
+}
+
+function navPageHow() {
+    hideAllScreens();
+    howToPlaySec.style.display = 'block';
+}
+
+function navPagePlay() {
+    hideAllScreens();
+    playSec.style.display ='block';
+
+}
+
+function showIntro() {
+    hideAllScreens();
+    homeSec.style.display = 'block';
+}
+
+
 function hideAllScreens() {
     const sections = document.getElementsByTagName('section')
     for (const section of sections) {
@@ -163,27 +200,41 @@ function hideAllScreens() {
     }
 }
 
-function navPageHome() {
-    showIntro();
-}
-
-function navPagePlay() {
-    hideAllScreens();
-    playSec.style.display ='block';
-}
-
-
-// This Function Shows the How To Play Screen
-function navPageHow() {
-    hideAllScreens();
-    howToPlaySec.style.display = 'block';
+function disablePlayButtons() {
+    const playButtons = document.getElementsByClassName('playBtn')
+    for (const playButton of playButtons) {
+        playButton.disabled = true;
+    }
 }
 
 
-function showIntro() {
-    hideAllScreens();
-    homeSec.style.display = 'block';
+
+function resetGame() {
+    // update the innerHTML for you choice to waiting
+    youChoiceLabel.innerHTML = 'waiting';
+    // update the innerHTML for you choice to waiting
+    cpuChoiceLabel.innerHTML = 'waiting';
+
+    currentRound.innerHTML = '1';
+    roundResultLabel.innerHTML = 'Pending';
+
+    nextRoundLabel.style.display = 'none';
+
+    youScoreLabel.innerHTML = '0';
+    cpuScoreLabel.innerHTML = '0'
+
+    game.you.score = 0;
+
+    game.cpu.score = 0;
+
+    game.cpu.choice = null;
+
+    game.you.choice = null;
+
+    game.round = 1
+
+    // Refreshes the text on the page to reflect these values
 }
 
-// This Function is called so that the Intro screen is displayed when the page loads
 showIntro();
+
