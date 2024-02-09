@@ -207,3 +207,8 @@ When the reset button is pressed all player scores will return to 0
 
 Playagain function()
 When the playagain button is pressed all player scores will return to 0 and return to the game page
+![how-to-play-screen.png](assets/img/how-to-play-screen.png)
+![intro-screen.png](assets/img/intro-screen.png)
+![winner-img.png](assets/img/winner-img.png)
+![play-screen.png](assets/img/play-screen.png)
+![play-winner-.png](assets/img/play-winner-.png)
