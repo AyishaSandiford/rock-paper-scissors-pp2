@@ -88,21 +88,44 @@ ul {
     margin-top: 40px;
 }
 
+/* Styles to Results Displayed Box */
+
 #roundDisplay {
-    margin: 50px;
+    margin: 50px auto;
     position: relative;
-    width: 300px;
+    width: 400px;
     height: 200px;
     border: 2px solid green;
+    background-color: lightgray;
 }
 
-#nextRoundLabel {
-    display: none;
+#roundStyle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #winnerLabel {
     display: none;
 }
+
+#currentRoundLabel {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+#choseStyle {
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+#nextRoundLabel{
+    margin-top: 30px;
+    display: none;
+}
+
+
+
 
 
 
