@@ -11,6 +11,7 @@
 
 body {
     font-family:'playfair Display',sans-serif;
+    text-align: center;
 }
 
 #gameBox {
@@ -48,6 +49,20 @@ button {
 ul {
     list-style-type: none;
 }
+
+/* Intro Page Styles and Buttons */
+
+#welcome {
+    margin: 40px;
+}
+
+/* Game Page Screen Styles and Buttons */
+
+#choseStyle {
+    display: flex;
+    justify-content: space-evenly;
+}
+
 
 #roundDisplay {
     margin: 50px;
