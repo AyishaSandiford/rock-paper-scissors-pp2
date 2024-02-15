@@ -12,12 +12,14 @@
 body {
     font-family:'playfair Display',sans-serif;
     text-align: center;
+    background-color: lightblue;
 }
 
+/* Game Styles */
+
 #gameBox {
-    border: solid 1px red;
-    height: 1000px;
-    width: 500px;
+    height: 700px;
+    width: 300px;
     margin:  auto;
     position: relative;
 }
@@ -126,7 +128,14 @@ ul {
 
 
 
+/* Media Query: Tablets and larger devices (768px and up) */
+@media screen and (min-width: 768px) {
 
+    #gameBox {
+        height: 1000px;
+        width: 500px;
+    }
 
+}
 
 
