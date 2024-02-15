@@ -56,6 +56,10 @@ ul {
     margin: 40px;
 }
 
+#introButtonContainer {
+    margin-top: 60px;
+}
+
 /* Game Page Screen Styles and Buttons */
 
 #choseStyle {
@@ -73,6 +77,15 @@ ul {
 
 #playAgainBtn {
     display: none;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 40px;
 }
 
 #roundDisplay {
