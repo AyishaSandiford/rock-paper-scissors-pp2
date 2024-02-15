@@ -1,12 +1,27 @@
-#gamebox {
+/* Google imports */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+/* Asterisk wildcard selector to override default styles set by browser */
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family:'playfair Display',sans-serif;
+}
+
+#gameBox {
     border: solid 1px red;
     height: 1000px;
     width: 500px;
-    margin: 20px auto;
+    margin:  auto;
     position: relative;
 }
 
-#gamebox > section {
+#gameBox > section {
     padding: 20px;
     position: absolute;
     top: 0;
@@ -19,6 +34,19 @@
     padding: 10px;
     background: #EEE;
     display: none;
+}
+
+/* Set Default Button Styles */
+
+button {
+    font-weight: bold;
+    padding: 10px;
+    width: 100px;
+    height: 40px;
+}
+
+ul {
+    list-style-type: none;
 }
 
 #roundDisplay {
