@@ -1,214 +1,197 @@
-### ROCK PAPER SCISSORS
+# ROCK PAPER SCISSORS
 
 ## How It Works?
 
-The name of this game is Rock Paper Scissors. This game requires two players, Player One and The Computer. Each player will be given three options and will only be required to choose one for each game. The options are Rock, Paper and Scissors. The player will click a “Let’s Start” button that will take them to the game page.
+The name of this game is Rock Paper Scissors. This game requires two players, Player One and The Computer.
+Player One is given three options to make their play from and the computer will generate a random choice from these options.
+Each Player will only be required to make one choice per game round.
+The game options are Rock, Paper and Scissors. The first player to score 5 wins wins the over all game.
 
-Highlighted text will be displayed above each player indicating who’s turn to choose an option. Player One will be first to choose. After Player One makes its choice, the computer will choose a random play from these options. The results of each round will automatically be displayed after the Computer plays.
+## What I was able to accomplish using JavaScript
+For this project, instead of creating multiple html pages to display the different pages of the game, I created different sections
+in one html file and used CSS and Javascript to make them hidden and/or reappear by the click of a button. This was achieved by using
+EventListeners in Javascript to 'listen' for the assigned button click to revealed each appropriate section. Javascript allowed me to
+create functions. I was able to call these functions throughout my application allowing them to execute the code written within.
+Using Javascript I was able to generate a random number from 0-2 and use these values to allow the computer to make plays against the player.
+This gaves the player the feel of playing with a real life user adding excitement since you dont know what the player will chose.
+Using Javascript I was able to increase the scores of each player and the Rounds as the game is played. I enjoyed creating this project and using Javascript.
 
-The results will be compared. Depending on the result, one of three alerts will be displayed indicating the winner:
-If Player one wins - Player One Wins This Round,
-If The Computer wins - The Computer Wins This Round,
-If both players choose the same option - This Round Is a Tie!
+## Targeted Audience
+- Adults and children of all ages
+- People who like to try their luck and might be feeling lucky
+- Persons who may not have a second player
+- Persons looking for a simple yet exciting game to play
 
-One point will be added to a player’s score each time the player wins and no points will be allocated to either player if the game results in a Tie.
+## User Stories
+- Provides an exciting way to pass the time
+- Allows players to keep track of scores
+- Gives the user a tartget score, this gives the player a final score to play towards and not play aimlessly without an objective
+- Displays buttons on each page to easily navigate throughout the game
+- Allows the user the option to reset the game and the option to play again once the game is over
+- Provides information on who won each round and what play each player chose
+- Displays to the user what round they are currently playing and the next round thats coming up
 
-The game is designed where after a player reaches 5 wins that completes the end of the game and the game has to be reset in order to play a new game.
 
-If Player One wins a screen will appear with a message saying “Congratulations You won the game!”. If The Computer wins this message will read “ You Lose. Better luck next time.
+##  Site Aims
+- Provide a fun and interactive game for All ages
+- To keep track of the current game scores
+- To inform users of who won the over all match
+- A simple and easy-to-find set of instructions
+  ********* To the best of my ability, make a game that a visually impaired individual can play.************
+- Provide an easy self explanatory way to navigate through the diffrent screens
+- To give the user feedback on wins, losses, and draws during rounds
 
-Once the Winner is displayed the only option available at this point would be to click the “Let’s Play again” button and the game will start over.
+## How Can This Be Achieved
+- Create a family friendly game that anyone can play
+- Increase each players scores when they win a match
+- Display winning and losing results throgh ot the game
+- Keeping the design simple and and not over load with information
 
+## Features
 
+When you visit the site you are taken to the Introduction Screen. This Screen Welcomes you to the game and clearly displays the name of the game. An image of two hands playing Rock, Paper, Scissors helps give you an indication of the games nature. Two buttons are below this image. These will take you to the 'How to play' screen with instructions and rules on the game. The 'Start' button will take you to the game page where you can start playing the game.
 
-## What you will See
+## How To Play Screen
 
-The first screen of the screen will have a heading of “Welcome to Rock Paper Scissor Game”. An image will be below this text of the game’s hand options. There will be two buttons below this images marked “How to Play” and “Let’s Start”.
+This screen has a simple layout which explains how to play the game and gives you the rules of the game. There is a 'Back' button that takes
+you back to the Home screen.
 
-How to Play Button
-When clicked, it will show a brief description of the game and how its played. A ‘back’ button will be present on this screen. This will take you back to the home screen.
+## The Game Screen
 
-Let’s Start button
-This brings you to the start of the game. Here you can make your first play.
+This is where the game is played. The name of the Game is shown to the top of the page and three buttons labeled Rock Paper and Scissors are displayed below. These are the choices given to the player to play the game.
 
-On the game screen there will be three buttons that will be used to make the choices. A button labeled “Reset” will be on this screen and can be clicked at anytime during the course of the game. This button will allow you to restart the game at any point.
-However, once a player’s score reaches 5 wins, this button will no longer be accessible and the rock paper and scissors buttons will be made disable.
-You|CPU Won the match will be on the screen at this point. A “Home” and “ Play Again” buttons will be on this screen. The Home button will take you to the home screen. This will also reset all ‘plays’, ‘scores’ and ‘rounds’. The Play Again button will do the same, however, you will remain on the Play screen.
+Below this, a box displays the Rounds and the choices that were chosen by both the player and computer.
 
+As the game is played the round will continue to show the current round that is being played and the round that will be played next.
 
-### Actions and State management
+Both the user and computer scores are tracked and displayed for the user.
 
-Page navigation
-To move between pages, set all the page to hidden and set the page you want to visible
+The reset button allows the user the reset the game and bring all scores to 0 and rounds back to Round 1. (This can only be used if a player has not yet
+scored 5 wins.
 
+The Home button takes you back to the Home Screen. This button will also reset all scores returning them to their original state.
 
-Game (global)
-Round: 1
-You
-Choice: null
-Score: 0
-cpu
-Choice: null
-Score: 0
+After a player reaches 5 wins the play Buttons: Rock paper and Scissors will become disabled. Text will appear announcing the Winner of the match
+in the rounds box.
 
+At this time they're two buttons enabled, the Home Button and the Play Again Button. These buttons will both reset the game
+However, the Home button will take you to the home screen and the Play again button will allow the user to remain on the game screen
+as to start a new game.
 
-Round 1
-You choose rock, paper or scissors by pressing the button
 
-In this application, 0 means rock, 1 means paper, 2 means scissors
+### Coding Languages Used
+HTML, CSS and JavaScript.
 
-When a button a pressed, assign a value to the game.you.choice property
-If it is the rock button, assign 0
-If it is the paper button assign 1
-If it is the scissors button, assign 2
+### Frameworks, Libraries & Programs Used
 
+sketch.com - Used to create wireframes.
 
-Then, generate a choice for the cpu. This choice will be 0, 1 or 2.
-Then, assign the generated choice to game.cpu.choice
+Git - For version control.
 
-Now that we have both choices, we need to determine who won!
+Github/PHP Code Editor - To save and store the code files for the website.
 
-Determine who won:
+*** Google Fonts - To choose and import my desired fonts.
 
-If Player chose 0 (rock)
+imageresizer.com - For resizing images
 
-If game.you.choice === game.cpu.choice then
-winner = false
+Readme.so - To be able to write and preview the Read me at the same time.
 
-If game.cpu.choice === 2
-winner = ‘you’
+Convertio - To change images to webp.
 
-If payer chose
+Stack Overflow - For more javascript information.
 
+W3Schools - For more javascript information.
 
+Am I Responsive? - To show the website on a range of different devices.
 
-Function judge (): returns false|you|cpu
+Wave Accessibility checker - To check the site is accessible to visually impaired Persons.
 
-Then there is a function who receives the value of who won or loss or if it is a tie
+Google Dev Tools - To help with responsive design and troubleshooting.
 
-Function assignPoints(winner false|you|cpu)
-If false, do nothing
-If you, increment score for game.you.score by 1
-If cpu, increment score for game.cpu.score by 1
+### Future Implementations
+In the future I would like to add the following features:
 
-Update the game screen
-On the screen, there is a paragraph that says:
+- Add a 2 player option with using Javascript to listen out for key buttons that would be assigned to a play button
+- Allow the option for the user to enter their own name to replace (You)
 
-“You chose: waiting” is there only until we replace it with what was actually chosen by the player
+## Testing
 
-We want to change the word waiting to a word that represents what the player chose. So if they chose rock, then we want it to show the word “Rock”. If they chose paper, we want it to show the word “Paper”
+Testing was performed with the following devices/browsers:
 
-On the screen, there is a paragraph that says:
-“CPU chose: waiting” where “waiting” is there only until we replace it with what was actually chosen by the CPU
+- Desktop computer: (2560 x 1440) display
+- Google Chrome
+- Firefox
+- Microsoft Edge
+- MacBook Pro: 13.3-inch (2560 × 1600) display
+- Google Chrome
+- iPad Pro: (2732 x 2048) display
+- iOS Safari
+- iPhone Xr: 828 x 1792 display
+- iOS Safari
 
-We want to change the word waiting to a word that represents what the CPU chose. So if the CPU chose rock, then we want it to show the word “Rock”. If the CPU chose paper, we want it to show the word “Paper”
+I also utilised the Chrome and Firefox developer tools to
+simulate the display on other devices and test the responsiveness of the site.
 
+## Deployment
 
 
-Set player score to the value of game.player.score
-Set CPU score to the value of game.cpu.score
-
-Show the someone has won text:
-CPU | YOU won!
-Or if it is a tie:
-It is a tie!
-
-
-Check if CPU or Player score = 5
-If so, then show the YOU|CPU have won the match screen
-Disable the Rock paper scissors buttons
-Change reset button to play again button
-
-Otherwise
-
-
-Reset button:
-This sets the game.you.score to 0
-This sets teh game.cpu.score to 0
-Sets the game.cpu.choice to null
-Sets teh game.you.choice to null
-Sets the game.round to 1
-Refreshes the text on the page to reflect these values
-
-Play again button
-Does everything above and also enables the rock paper scissors button
-And shows the reset button instead of the play again button
-
-
-
-
-
-computerGeneratedPlay()
-Computer will generate a random number from 0 - 2
-where:
-0 == rock
-1 == paper
-2 == scissors
-
-
-judge function()
-This will take one parameter : Player One 
-The Computer random choice
-If
-Player One chooses Rock and Computer Chooses Scissors
-Or
-Player One chooses Paper and Computer Chooses Rock
-Or
-Player One chooses Scissors and Computer Chooses Paper
-Execute this :
-Assign winner text (You Won!) 
-Return
-p1Win
-Else if
-computerGeneratedPlay === Rock and Player One Chooses Scissors
-Or
-computerGeneratedPlay === Paper and Player One Chooses Rock
-Or
-computerGeneratedPlay === Sicssors and Player One Chooses Paper
-Execute this :
-Assign winner text (The Computer won! Try again next time”) 
-Return
-Winner
-Else
-It’s a Tie!
-
-
-Score function()
-This will take two parameters : Player One and The Computer
-PlayerOne =
-Add 1 point until points are === to 5
-However, if
-The Computer =
-Add 1 point until points are === to 5
-Else if
-PlayerOne {selection} and Computer {selection} === rock
-Or
-PlayerOne {selection} and Computer {selection} === paper
-Or
-PlayerOne {selection} and Computer {selection} === scissors
-return
-Alert ‘It’s a Tie’
-Points will not be incremented but will remain the same
-
-
-FinalWinner function()
-When player One Points are === to 5
-Display
-Round 1 You Won
-Else
-When The Computer Points are === to 5
-Display
-Round 1 CPU Won
-
-
-Reset function()
-When the reset button is pressed all player scores will return to 0
-
-
-Playagain function()
-When the playagain button is pressed all player scores will return to 0 and return to the game page
-![how-to-play-screen.png](assets/img/how-to-play-screen.png)
-![intro-screen.png](assets/img/intro-screen.png)
-![winner-img.png](assets/img/winner-img.png)
-![play-screen.png](assets/img/play-screen.png)
-![play-winner-.png](assets/img/play-winner-.png)
+- The site was deployed to GitHub pages. the steps to deploy are as follows:
+    - In the GitHub repository, navigate to the settings tab
+    - Select the pages link from the setting menu on the left hand side
+    - Under the GitHub Pages from the source section drop-down menu, select the master branch
+    - Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
+    - The live link can be found here - [Rock-Paper-Scissors Live Site]()
+
+
+## Solved Bugs
+.....
+....
+....
+
+## Credits
+
+## General reference:
+
+I relied upon [W3schools](https://www.w3schools.com/), and stack overflow for general references throughout this project.
+I also got a additional information on Javascript from [Youtube - simpleDev](https://www.youtube.com/watch?v=Bcz3zVogiI0&t=31s)
+
+### Honorable Mentions
+
+This project could not have happened without the support of the following people listed in no particular order:
+
+- David Bowers - My Mentor. I couldn't have been paired with a better Mentor! I am forever thankful for your guidance and support.
+- Kyle Skeete - Provided feedback on the project. Big thanks!
+- Code Institute - For giving me this opportunity and providing me with unlimited resources, step by step videos and tons of support!
+- The Code Institute Slack community where I was able to find answers to problems in JavaScript
+- And my amazing Fiancé Steven Rawlins who has been my rock and my biggest cheer leader from day one. Thank you for your continuous support every step of the way!
+
+## Media
+
+- Image from [FreePik](https://www.freepik.com/): Intro Page Image
+- Favicon from [Flaticon](https://www.flaticon.com): Favicon
+
+
+## Validator Testing
+
+#### HTML
+
+No errors were returned when passing through the official W3C Validator.
+- [Index.html]()
+
+#### CSS
+
+No errors were returned when passing through the official (Jigsaw) Validator [CSS Results]()
+
+## Lighthouse
+
+I generated a lighthouse report on both desktop and mobile view. ......
+
+## Jshint
+
+No errors were found when Javascript was checked using Jshint
+
+Wave Evaluation and Pesticide was also used to check for any bugs. These results all came back good!
+
+
+
+
