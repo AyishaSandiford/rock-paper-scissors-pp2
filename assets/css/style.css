@@ -9,26 +9,39 @@
     margin: 0;
 }
 
+html {
+    height: 100%;
+}
+
+
 body {
     font-family:'playfair Display',sans-serif;
     text-align: center;
-    background-color: lightblue;
+    height: 100%;
+    background-color: #EEE;
 }
 
 /* Game Styles */
 
+.canvas {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    height: 100%;
+    padding: 5px;
+}
+
 #gameBox {
-    height: 700px;
-    width: 300px;
-    margin:  auto;
-    position: relative;
+    max-height: 850px;
+    width: 100%;
+    max-width: 500px;
+    min-width: 250px;
+    background-color: lightblue;
+    border: solid 1px darkblue;
 }
 
 #gameBox > section {
     padding: 20px;
-    position: absolute;
-    top: 0;
-    width: 460px;
     display: none;
 }
 
@@ -44,8 +57,10 @@ body {
 button {
     font-weight: bold;
     padding: 10px;
-    width: 100px;
+    width: 140px;
     height: 40px;
+    margin-top: 10px;
+    margin-bottom : 10px;
 }
 
 ul {
@@ -55,11 +70,11 @@ ul {
 /* Intro Page Styles and Buttons */
 
 #welcome {
-    margin: 40px;
+    margin: 20px 0;
 }
 
-#introButtonContainer {
-    margin-top: 60px;
+#introImg img {
+    max-width: 100%;
 }
 
 /* Game Page Screen Styles and Buttons */
@@ -67,14 +82,15 @@ ul {
 #choseStyle {
     display: flex;
     justify-content: space-evenly;
+    gap: 10px;
 }
 
 #scoreSec {
     display: flex;
     justify-content: space-between;
     font-weight: bold;
-    font-size: 25px;
-    margin-bottom: 50px;
+    font-size: 18px;
+    margin-bottom: 25px;
 }
 
 #playAgainBtn {
@@ -84,21 +100,18 @@ ul {
 .buttonContainer {
     display: flex;
     justify-content: center;
-    gap: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-top: 40px;
+    gap: 10px;
+    margin-top: 20px;
 }
 
 /* Styles to Results Displayed Box */
 
 #roundDisplay {
-    margin: 50px auto;
-    position: relative;
-    width: 400px;
-    height: 200px;
-    border: 2px solid green;
+    margin: 25px auto;
+    padding: 10px;
+    border: 2px solid black;
     background-color: lightgray;
+    min-height: 200px;
 }
 
 #roundStyle {
@@ -113,12 +126,12 @@ ul {
 
 #currentRoundLabel {
     font-weight: bold;
-    font-size: 30px;
+    font-size: 20px;
 }
 
 #choseStyle {
     margin-top: 10px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 #nextRoundLabel{
@@ -126,16 +139,5 @@ ul {
     display: none;
 }
 
-
-
-/* Media Query: Tablets and larger devices (768px and up) */
-@media screen and (min-width: 768px) {
-
-    #gameBox {
-        height: 1000px;
-        width: 500px;
-    }
-
-}
 
 
