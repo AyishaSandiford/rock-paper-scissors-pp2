@@ -123,7 +123,7 @@ Github/PHP Code Editor - To save and store the code files for the website.
 
 Wave Accessibility checker - To check the site is accessible to visually impaired Persons.
 
-Google Dev Tools - To help with responsive design and troubleshooting.
+Google Dev Tools - This helped with responsive design and troubleshooting.
 
 ### Future Implementations
 In the future I would like to add the following features:
@@ -157,17 +157,24 @@ simulate the display on other devices and test the responsiveness of the site.
     - Select the pages link from the setting menu on the left hand side
     - Under the GitHub Pages from the source section drop-down menu, select the master branch
     - Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
-    - The live link can be found here - [Rock-Paper-Scissors Live Site]()
+    - The live link can be found here - [Rock-Paper-Scissors Live Site](https://ayishasandiford.github.io/rock-paper-scissors-pp2/)
 
 
 ## Solved Bugs / Fixes
-- I tried calling the play function directly when either the Rock, Paper or Scissors buttons were pressed. 
+1) I tried calling the play function directly when either the Rock, Paper or Scissors buttons were pressed. 
 However, the play method takes a parameter which is 0, 1 or 2 depending on if the player choose Rock, Paper or Scissors respectively.
 So instead of using the play function for each button’s event listener, I instead used a separate and unique function for each 
 event listener and from that function, I called the play button with the appropriate parameter value depending on which button was pressed.
 I knew which button was pressed based on the function that responded to the event.
-- I received an error after trying to use a variable before it was declared. I then made sure I declared all of my variables before using them.
-- I placed some of my code into functions so to reuse it in different areas of my application 
+
+2) I received an error after trying to use a variable before it was declared. I then made sure I declared all of my variables before using them.
+
+3) I placed some of my code into functions so to reuse it in different areas of my application 
+
+
+## Styles and Features
+- I chose a background color of lightblue because I thought the color went back nicely with the game.
+- I played around with different fonts at first. I was looking for a playful type of font and I chose playfair Display font to give this effect
 
 
 ## Credits
@@ -183,13 +190,14 @@ This project could not have happened without the support of the following people
 
 - David Bowers - My Mentor. I couldn't have been paired with a better Mentor! I am forever thankful for your guidance and support.
 - Kyle Skeete - Provided feedback on the project. Big thanks!
+- Omar Fitzpatrick - Who gave constructive criticism and help point out thing that I might had over-looked
 - Code Institute - For giving me this opportunity and providing me with unlimited resources, step by step videos and tons of support!
 - The Code Institute Slack community where I was able to find answers to problems in JavaScript
 - And my amazing Fiancé Steven Rawlins who has been my rock and my biggest cheer leader from day one. Thank you for your continuous support every step of the way!
 
 ## Media
 
-- Image from [FreePik](https://www.freepik.com/): Intro Page Image
+- Image from [FreePik](https://www.freepik.com/): By Upklyak  - Intro Page Image
 - Favicon from [Flaticon](https://www.flaticon.com): Favicon
 
 
@@ -198,21 +206,25 @@ This project could not have happened without the support of the following people
 #### HTML
 
 No errors were returned when passing through the official W3C Validator.
-- [Index.html]()
+
+![HTML Validator](doc/screenshots/html-validator.png)
 
 #### CSS
 
-No errors were returned when passing through the official (Jigsaw) Validator [CSS Results]()
+No errors were returned when passing through the official (Jigsaw) Validator [CSS Results](https://jigsaw.w3.org/css-validator/validator)
+
+![CSS Validator](doc/screenshots/css-validator.png)
 
 ## Lighthouse
 
-I generated a lighthouse report on both desktop and mobile view. ......
+I generated a lighthouse report on both desktop and mobile view. Both results were good.
+![Lighthouse generated](doc/screenshots/lighthouse-generated.png)
 
 ## Jshint
 
-No errors were found when Javascript was checked using Jshint
+No errors were found when Javascript was checked using [Jshint](https://jshint.com/)
 
-Wave Evaluation and Pesticide was also used to check for any bugs. These results all came back good!
+Pesticide was also used to ensure proper structured layout. These results all came back good!
 
 
 
