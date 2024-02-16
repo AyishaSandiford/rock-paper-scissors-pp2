@@ -111,8 +111,8 @@ Google Dev Tools - To help with responsive design and troubleshooting.
 ### Future Implementations
 In the future I would like to add the following features:
 
-- Add a 2 player option with using Javascript to listen out for key buttons that would be assigned to a play button
-- Allow the option for the user to enter their own name to replace (You)
+- Add a 2 player option so users can play with a friend
+- Allow the option for the user to enter their own name and replace 'You'
 
 ## Testing
 
@@ -143,10 +143,15 @@ simulate the display on other devices and test the responsiveness of the site.
     - The live link can be found here - [Rock-Paper-Scissors Live Site]()
 
 
-## Solved Bugs
-.....
-....
-....
+## Solved Bugs / Fixes
+- I tried calling the play function directly when either the Rock, Paper or Scissors buttons were pressed. 
+However, the play method takes a parameter which is 0, 1 or 2 depending on if the player choose Rock, Paper or Scissors respectively.
+So instead of using the play function for each button’s event listener, I instead used a separate and unique function for each 
+event listener and from that function, I called the play button with the appropriate parameter value depending on which button was pressed.
+I knew which button was pressed based on the function that responded to the event.
+- I received an error after trying to use a variable before it was declared. I then made sure I declared all of my variables before using them.
+- I placed some of my code into functions so to reuse it in different areas of my application 
+
 
 ## Credits
 
