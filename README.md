@@ -7,6 +7,8 @@ Player One is given three options to make their play from and the computer will 
 Each Player will only be required to make one choice per game round.
 The game options are Rock, Paper and Scissors. The first player to score 5 wins wins the over all game.
 
+![responsive-img.png](doc/screenshots/responsive-img.png)
+
 ## What I was able to accomplish using JavaScript
 For this project, instead of creating multiple html pages to display the different pages of the game, I created different sections
 in one html file and used CSS and Javascript to make them hidden and/or reappear by the click of a button. This was achieved by using
@@ -19,13 +21,13 @@ Using Javascript I was able to increase the scores of each player and the Rounds
 ## Targeted Audience
 - Adults and children of all ages
 - People who like to try their luck and might be feeling lucky
-- Persons who may not have a second player
+- Persons who may not have another person to play with
 - Persons looking for a simple yet exciting game to play
 
 ## User Stories
 - Provides an exciting way to pass the time
 - Allows players to keep track of scores
-- Gives the user a tartget score, this gives the player a final score to play towards and not play aimlessly without an objective
+- Gives the user a target score, this gives the player a final score to play towards and not play aimlessly without any objective
 - Displays buttons on each page to easily navigate throughout the game
 - Allows the user the option to reset the game and the option to play again once the game is over
 - Provides information on who won each round and what play each player chose
@@ -37,26 +39,36 @@ Using Javascript I was able to increase the scores of each player and the Rounds
 - To keep track of the current game scores
 - To inform users of who won the over all match
 - A simple and easy-to-find set of instructions
-  ********* To the best of my ability, make a game that a visually impaired individual can play.************
-- Provide an easy self explanatory way to navigate through the diffrent screens
+- Provide an easy self-explanatory way to navigate through the different screens
 - To give the user feedback on wins, losses, and draws during rounds
 
 ## How Can This Be Achieved
-- Create a family friendly game that anyone can play
+- Create a family friendly game that persons of all ages can play
 - Increase each players scores when they win a match
-- Display winning and losing results throgh ot the game
-- Keeping the design simple and and not over load with information
+- Display winning and losing results throughout the game
+- Keeping the design simple and not over-load with much unnecessary information
 
 ## Features
 
-When you visit the site you are taken to the Introduction Screen. This Screen Welcomes you to the game and clearly displays the name of the game. An image of two hands playing Rock, Paper, Scissors helps give you an indication of the games nature. Two buttons are below this image. These will take you to the 'How to play' screen with instructions and rules on the game. The 'Start' button will take you to the game page where you can start playing the game.
+When you first visit the site you are taken to the Introduction Screen.
+This Screen Welcomes you to the game and clearly displays the name of the game. 
+An image of two hands playing Rock, Paper, Scissors helps give you an indication of 
+the games nature. Two buttons are below this image. These will take you to the 
+'How to play' screen with instructions and rules on the game. The 'Start' button
+will take you to the game page where you can start playing the game.
+
+![intro-page.png](doc/screenshots/intro-page.png)
 
 ## How To Play Screen
 
 This screen has a simple layout which explains how to play the game and gives you the rules of the game. There is a 'Back' button that takes
 you back to the Home screen.
 
+![how-to-play-screen.png](doc/screenshots/how-to-play-screen.png)
+
 ## The Game Screen
+
+![game-screen.png](doc/screenshots/game-screen.png)
 
 This is where the game is played. The name of the Game is shown to the top of the page and three buttons labeled Rock Paper and Scissors are displayed below. These are the choices given to the player to play the game.
 
@@ -64,12 +76,18 @@ Below this, a box displays the Rounds and the choices that were chosen by both t
 
 As the game is played the round will continue to show the current round that is being played and the round that will be played next.
 
+![round-box.png](doc/screenshots/round-box.png)
+
 Both the user and computer scores are tracked and displayed for the user.
+
+![score-img.png](doc/screenshots/score-img.png)
 
 The reset button allows the user the reset the game and bring all scores to 0 and rounds back to Round 1. (This can only be used if a player has not yet
 scored 5 wins.
 
 The Home button takes you back to the Home Screen. This button will also reset all scores returning them to their original state.
+
+![home-and-reset-btn.png](doc/screenshots/home-and-reset-btn.png)
 
 After a player reaches 5 wins the play Buttons: Rock paper and Scissors will become disabled. Text will appear announcing the Winner of the match
 in the rounds box.
@@ -78,6 +96,7 @@ At this time they're two buttons enabled, the Home Button and the Play Again But
 However, the Home button will take you to the home screen and the Play again button will allow the user to remain on the game screen
 as to start a new game.
 
+![winner-page-display.png](doc/screenshots/winner-page-display.png)
 
 ### Coding Languages Used
 HTML, CSS and JavaScript.
@@ -90,19 +109,17 @@ Git - For version control.
 
 Github/PHP Code Editor - To save and store the code files for the website.
 
-*** Google Fonts - To choose and import my desired fonts.
+[Google Fonts](https://fonts.google.com/)- To choose and import my desired fonts.
 
-imageresizer.com - For resizing images
+[imageresizer](https://imageresizer.com/) - For resizing images
 
-Readme.so - To be able to write and preview the Read me at the same time.
+[Readme.so](https://readme.so/) - To be able to write and preview the Read me at the same time.
 
-Convertio - To change images to webp.
+[Stack Overflow](https://stackoverflow.com/) - For more javascript information.
 
-Stack Overflow - For more javascript information.
+[W3Schools](https://www.w3schools.com/) - For more javascript information.
 
-W3Schools - For more javascript information.
-
-Am I Responsive? - To show the website on a range of different devices.
+[Am I Responsive?](https://ui.dev/amiresponsive) - To show the website on a range of different devices.
 
 Wave Accessibility checker - To check the site is accessible to visually impaired Persons.
 
