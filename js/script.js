@@ -50,7 +50,9 @@ const ROCK = 0;
 const PAPER = 1;
 const SCISSORS = 2;
 
-
+/**
+ * Game object to represent the current game state
+ */
 let game = {
     round: 1,
     you: {
